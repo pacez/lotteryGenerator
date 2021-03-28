@@ -6,23 +6,17 @@
 
 const generator = (length,max = 35) => {
     const result = [];
-
     const fill = () => {
         let value = parseInt(Math.random() * max + 1, 10) || 1;
-
         if (result.length >= length) {
             return
         }
-
         if (!result.includes(value)) {
             result.push(value);
         }
-
         fill();
     };
-
     fill();
-
     return result
 }
 
