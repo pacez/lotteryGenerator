@@ -7,7 +7,6 @@
 const generator = (length,max = 35) => {
     const result = [];
 
-
     const fill = () => {
         let value = parseInt(Math.random() * max + 1, 10) || 1;
 
@@ -35,8 +34,8 @@ const generator = (length,max = 35) => {
  * @total: 注数，默认5
  */
 const nums = (params={}) => {
-	const {frontSize = 5, endSize = 2, frontMax=35,endMax=12,total=5} = params;
-    var list = [];
+    const {frontSize = 5, endSize = 2, frontMax=35,endMax=12,total=5} = params;
+    let list = [];
     for(var i=0; i<total; i++) {
         const font = generator(frontSize,frontMax).sort((a,b) => a-b);
         const end = generator(endSize,endMax).sort((a, b) => a - b);
